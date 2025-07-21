@@ -35,7 +35,7 @@ class ChatBotUI:
         with ui.column().style('width: 368px; height: 540px;'):
             with ui.row().style('width: 100%; justify-content: space-between;'):
                 ui.label('AI Chat!').style('margin: 0 auto;')
-                ui.button(icon='delete', on_click=delete_memory)
+                ui.button(icon='delete', on_click=self.delete_messages)
             self.chat_container = ui.column().style('width: 100%; flex: 1; overflow-y: auto; justify-content: flex-end;')
             with ui.row().style('width: 100%; align-items: center; justify-content: space-between; background-color: gray; padding: 5px; border-radius: 10px;'):
                 self.user_prompt = ui.textarea().props('clearable rows=3').style('flex: 1;').classes('text-area')
@@ -61,3 +61,7 @@ class ChatBotUI:
             sender_val = 'user-bubble' if sender == 'User' else 'bot-bubble'
             ui.markdown(message).classes(f'message-bubble {sender_val}')
 
+
+    def delete_messages(self):
+        delete_memory()
+        self.chat_container.clear()

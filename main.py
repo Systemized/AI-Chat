@@ -4,7 +4,7 @@ from pinecone import Pinecone
 import uuid
 
 from dotenv import load_dotenv
-from gui import ui, ChatBotUI
+import gui
 
 # .env
 load_dotenv()
@@ -58,10 +58,10 @@ def delete_memory():
     index.delete(delete_all=True)
 
 def main():
-    ChatBotUI()
+    gui.ChatBotUI()
 
     # Run app in a window instead of browser
-    ui.run(native=True, window_size=(400, 600), reload=False, title="AI Chat")
+    gui.ui.run(native=True, window_size=(400, 600), reload=False, title="AI Chat")
 
 if __name__ == "__main__":
     main()
