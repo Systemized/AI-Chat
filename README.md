@@ -21,6 +21,7 @@ git clone https://github.com/Systemized/AI-Chat.git
 ```
 OpenAI_Key="<your-openai-api-key>"
 Pinecone_Key="<your-pinecone-key>"
+Pinecone_Index="<your-pinecone-index">
 ```
 
 - Install dependencies & run

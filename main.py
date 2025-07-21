@@ -12,7 +12,7 @@ load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OpenAI_Key"))
 pc = Pinecone(api_key=os.getenv("Pinecone_Key"))
-index = pc.Index("openai-api-database")
+index = pc.Index(os.getenv("Pinecone_Index"))
 
 def ai_response(user_message):
     embedding = client.embeddings.create(
