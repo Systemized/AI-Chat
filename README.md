@@ -17,7 +17,7 @@ A python project that utilizes OpenAI API with Pinecone vector database, to crea
 git clone https://github.com/Systemized/AI-Chat.git
 ```
 
-- Create an .env file in root
+- Create an .env file in root, with the following
 ```
 OpenAI_Key="<your-openai-api-key>"
 Pinecone_Key="<your-pinecone-key>"
