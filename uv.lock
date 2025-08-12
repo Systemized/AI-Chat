@@ -21,11 +21,11 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "nicegui", specifier = ">=2.21.1" },
-    { name = "openai", specifier = ">=1.97.0" },
+    { name = "nicegui", specifier = ">=2.22.2" },
+    { name = "openai", specifier = ">=1.99.9" },
     { name = "pinecone", specifier = ">=7.3.0" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
-    { name = "pywebview", specifier = ">=5.4" },
+    { name = "pywebview", specifier = ">=6" },
 ]
 
 [[package]]
@@ -698,7 +698,7 @@ wheels = [
 
 [[package]]
 name = "nicegui"
-version = "2.21.1"
+version = "2.22.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiofiles" },
@@ -723,14 +723,14 @@ dependencies = [
     { name = "vbuild" },
     { name = "watchfiles" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/dd/01/54a2fa0e8348daa1b8ec9366cbb030d9e29e4838aff4b309f88f9b37ac87/nicegui-2.21.1.tar.gz", hash = "sha256:1063ea5f6ba696a8240835ff635157a8af11470c7e12dd34bfb7620d0355a2bd", size = 13099191, upload-time = "2025-07-10T08:42:33.434Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/cc/81/aaf1432abf54f25d62a3c346a087db39c4d7a38833795c3f1eb90feab5fd/nicegui-2.22.2.tar.gz", hash = "sha256:5c0aaf2d2365c665ae42955b17d6fa7ba19526d7aa9bd02ab547917e7bd1338c", size = 13107276, upload-time = "2025-08-09T15:31:08.031Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3d/85/359241bbdc5d3c90a481d9db55f780e42757b4e92248e37a659d1b42e94f/nicegui-2.21.1-py3-none-any.whl", hash = "sha256:3c26b628b6384f859e2f6044fbc398b2b0c7fd0feb50a51ce72a233157f77d34", size = 13483374, upload-time = "2025-07-10T08:42:29.984Z" },
+    { url = "https://files.pythonhosted.org/packages/84/2b/141c85335df3982ca9a54da95d0c8954efe9756da8f2edaba2afbd262014/nicegui-2.22.2-py3-none-any.whl", hash = "sha256:a0e371918419af5bae7b22e6b55a29065a7a4222908af66584fd599e391b5b5f", size = 13494497, upload-time = "2025-08-09T15:31:05.235Z" },
 ]
 
 [[package]]
 name = "openai"
-version = "1.97.0"
+version = "1.99.9"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anyio" },
@@ -742,9 +742,9 @@ dependencies = [
     { name = "tqdm" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e0/c6/b8d66e4f3b95493a8957065b24533333c927dc23817abe397f13fe589c6e/openai-1.97.0.tar.gz", hash = "sha256:0be349569ccaa4fb54f97bb808423fd29ccaeb1246ee1be762e0c81a47bae0aa", size = 493850, upload-time = "2025-07-16T16:37:35.196Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/8a/d2/ef89c6f3f36b13b06e271d3cc984ddd2f62508a0972c1cbcc8485a6644ff/openai-1.99.9.tar.gz", hash = "sha256:f2082d155b1ad22e83247c3de3958eb4255b20ccf4a1de2e6681b6957b554e92", size = 506992, upload-time = "2025-08-12T02:31:10.054Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/8a/91/1f1cf577f745e956b276a8b1d3d76fa7a6ee0c2b05db3b001b900f2c71db/openai-1.97.0-py3-none-any.whl", hash = "sha256:a1c24d96f4609f3f7f51c9e1c2606d97cc6e334833438659cfd687e9c972c610", size = 764953, upload-time = "2025-07-16T16:37:33.135Z" },
+    { url = "https://files.pythonhosted.org/packages/e8/fb/df274ca10698ee77b07bff952f302ea627cc12dac6b85289485dd77db6de/openai-1.99.9-py3-none-any.whl", hash = "sha256:9dbcdb425553bae1ac5d947147bebbd630d91bbfc7788394d4c4f3a35682ab3a", size = 786816, upload-time = "2025-08-12T02:31:08.34Z" },
 ]
 
 [[package]]
@@ -1193,7 +1193,7 @@ wheels = [
 
 [[package]]
 name = "pywebview"
-version = "5.4"
+version = "6.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "bottle" },
@@ -1207,9 +1207,9 @@ dependencies = [
     { name = "qtpy", marker = "sys_platform == 'openbsd6'" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/7a/c7/645f3b0bb190bf58c5cea9cfbcaa337ce3b54531ad207d3748676eb8cdc9/pywebview-5.4.tar.gz", hash = "sha256:b5e2c6c7502aaf72a9ae6034daf83785f5fad874fac7fa82bf4fcf854f1f083a", size = 466398, upload-time = "2025-01-27T21:59:05.762Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a8/2a/0279e9da655481cef5dd0cdb1f9b8bfbe8fdf81d0062731f8e1e6668898d/pywebview-6.0.tar.gz", hash = "sha256:05c339ace3ee1c11391aa9ae8c4645c67239e769c91228f63196d8d120a9feb8", size = 493594, upload-time = "2025-08-08T09:25:21.113Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/4c/5a/7af3b9f8fb51d544b31f2f6c12635eac77d1e9a99f72dd12c9364062d59d/pywebview-5.4-py3-none-any.whl", hash = "sha256:0559c47db543556498dd38604a2a0479896c320f86c9b23499b8e580b58b699d", size = 475504, upload-time = "2025-01-27T21:59:02.459Z" },
+    { url = "https://files.pythonhosted.org/packages/2c/74/611f560a08c5d62fe5a528f784f71aefa4753a52b448489be92f310a3748/pywebview-6.0-py3-none-any.whl", hash = "sha256:6164b2a3debc416eeba15f3a48b1febd0b9483a6674c933c7c9b59fb4b11f474", size = 508599, upload-time = "2025-08-08T09:25:19.018Z" },
 ]
 
 [[package]]

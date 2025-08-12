@@ -5,9 +5,9 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "nicegui>=2.21.1",
-    "openai>=1.97.0",
+    "nicegui>=2.22.2",
+    "openai>=1.99.9",
     "pinecone>=7.3.0",
     "python-dotenv>=1.1.1",
-    "pywebview>=5.4",
+    "pywebview>=6",
 ]
