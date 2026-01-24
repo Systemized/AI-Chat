@@ -26,6 +26,6 @@ Pinecone_Index="<your-pinecone-index">
 
 - Install dependencies & run
 ```sh
-pip install .
+pip install -r requirements.txt
 python main.py
 ```
