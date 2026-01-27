@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.11"
 resolution-markers = [
     "python_full_version >= '3.12' and python_full_version < '4'",
@@ -15,6 +15,7 @@ dependencies = [
     { name = "nicegui" },
     { name = "openai" },
     { name = "pinecone" },
+    { name = "pydantic" },
     { name = "python-dotenv" },
     { name = "pywebview" },
 ]
@@ -24,6 +25,7 @@ requires-dist = [
     { name = "nicegui", specifier = ">=2.22.2" },
     { name = "openai", specifier = ">=1.99.9" },
     { name = "pinecone", specifier = ">=7.3.0" },
+    { name = "pydantic", specifier = ">=2.11.7" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "pywebview", specifier = ">=6" },
 ]
