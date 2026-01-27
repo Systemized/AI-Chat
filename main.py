@@ -33,12 +33,12 @@ def ai_response(user_message):
     results = index.query(vector=embedding, top_k=3, include_metadata=True)
     
     # Build context
-    context = ""
+    context = "Context from past chats (if any):\n"
     for match in results.matches:
         if match.score > 0.3:  # Only highly similar
-            user_msg = match.metadata.get('user', '')
-            assistant_msg = match.metadata.get('assistant', '')
-            context += f"Past - User: {user_msg} Assistant: {assistant_msg}\n"
+            type_info = match.metadata.get('type', '')
+            content_info = match.metadata.get('content', '')
+            context += f"type: {type_info} content: {content_info}\n"
     
     system_instruction = f"""
     You are a helpful assistant.
