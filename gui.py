@@ -1,5 +1,5 @@
 from nicegui import app, ui
-from main import ai_response, delete_memory
+from ai import ai_response, delete_memory
 
 # Dark mode enabled & window resizing disabled
 app.native.window_args['resizable'] = False
