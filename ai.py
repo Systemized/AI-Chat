@@ -67,14 +67,14 @@ def ai_response(user_message):
 
     # Limits convo to 10, since we only use that much
     if len(conversation) > 10:
-        conversation = conversation[-10:]
+        del conversation[:-10]
 
     # Filters chat to see if its worth storing into pinecone
     storageFilter = client.responses.parse(
         model="gpt-4.1-mini",
         input=[
             {"role": "system", "content": 
-            '''
+            """
             You are a long-term memory extraction system.
 
             Your task is to analyze a user message and the assistant's response
@@ -104,7 +104,7 @@ def ai_response(user_message):
             - skill
 
             Confidence should in tenths only, from 0.1 (low) - 0.9 (high), except when nothing is worth storing (0.0)
-            '''},
+            """},
             {"role": "user", "content": user_message},
             {"role": "assistant", "content": response}
         ],
@@ -127,5 +127,9 @@ def ai_response(user_message):
 
 # Delete all vectors from pinecone index. keeps the index.
 def delete_memory():
-    index.delete(delete_all=True)
-    print("Pinecone records deleted")
+    try:
+        del conversation[:]
+        index.delete(delete_all=True)
+        print("Pinecone records deleted")
+    except:
+        print("No Pinecone records to delete")

@@ -1,4 +1,4 @@
-from nicegui import app, ui
+from nicegui import app, ui, run
 from ai import ai_response, delete_memory
 
 # Dark mode enabled & window resizing disabled
@@ -41,7 +41,7 @@ class ChatBotUI:
                 self.user_prompt = ui.textarea().props('clearable rows=3').style('flex: 1;').classes('text-area')
                 ui.button('Send', on_click=self.send_message)
 
-    def send_message(self):
+    async def send_message(self):
         user_text = self.user_prompt.value.strip()
         if not user_text:
             return
@@ -50,8 +50,10 @@ class ChatBotUI:
         self.add_message('User', user_text)
         self.user_prompt.value = ''
 
+        response = await run.io_bound(ai_response, user_text)
+
         # Bot response
-        self.add_message('Bot', ai_response(user_text))
+        self.add_message('Bot', response)
 
     
     def add_message(self, sender, message):
